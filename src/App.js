@@ -7,13 +7,13 @@ export default function App() {
   const [text, setText] = useState("");
   const [open, setOpen] = useState(false);
 
-  const onChenge = (e) => setText(e.target.value);
+  const onChangeText = (e) => setText(e.target.value);
 
   const onClickOpen = () => setOpen(!open);
 
   return (
     <div className="App">
-      <input value={text} onChenge={onChenge} />
+      <input value={text} onChange={onChangeText} />
       <br />
       <br />
       <button onClick={onClickOpen}>表示</button>
